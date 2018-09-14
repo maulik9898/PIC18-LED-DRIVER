@@ -1,0 +1,34 @@
+/*
+ * File:   main.c
+ * Author: Maulik
+ *
+ * Created on August 9, 2018, 11:54 AM
+ */
+
+
+#include <xc.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include "prob1.h"
+void delay(unsigned char c){
+    for(unsigned char i=0;i<c;i++);
+}
+void ledSeg(void)
+{   LATCbits.LATC1=1;
+    LATCbits.LATC2=1;
+    LATCbits.LATC3=1;
+    LATCbits.LATC4=1;
+    LATCbits.LATC5=1;
+    LATCbits.LATC6=1;
+    LATCbits.LATC7=1;
+
+
+}
+void main(void){
+    unsigned char j;
+    TRISC=0x00;
+    while(1)
+    {
+        ledSeg();
+    }
+}

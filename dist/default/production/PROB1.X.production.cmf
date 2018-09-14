@@ -1,0 +1,449 @@
+%CMF
+# %PSECTS Section
+# For each object file, details of its psects are enumerated here.
+# The begining of the section is indicated by %PSECTS.  The first
+# line indicates the name of the first object file, e.g.
+#    $foo.obj
+# Each line that follows describes a psect in that object file, until
+# the next object file.  The lines that describe a psect have the
+# format:
+#    <psect name> <class name> <space> <link address> <load addresses> <length> <delta>
+# All addresses and the length are given in unqualified hexadecimal
+# in delta units.  Any other numeric values are decimal.
+%PSECTS
+$dist/default/production\PROB1.X.production.o
+cinit CODE 0 BA2 BA2 26 1
+text0 CODE 0 BF0 BF0 32 1
+text1 CODE 0 C68 C68 398 1
+text2 CODE 0 B90 B90 12 1
+text3 CODE 0 B80 B80 10 1
+text4 CODE 0 BC8 BC8 28 1
+idataCOMRAM CODE 0 C22 C22 46 1
+cstackCOMRAM COMRAM 1 47 47 2 1
+dataCOMRAM COMRAM 1 1 1 46 1
+$C:\Users\Maulik\AppData\Local\Temp\scm4.o
+idloc IDLOC 0 200000 200000 8 1
+init CODE 0 0 0 4 1
+config CONFIG 0 300000 300000 E 1
+# %UNUSED Section
+# This section enumerates the unused ranges of each CLASS. Each entry
+# is described on a single line as follows:
+#    <class name> <range> <delta>
+# Addresses given in the range are in hexadecimal and units of delta.
+%UNUSED
+RAM 80-1FF 1
+SFR F80-FFF 1
+BANK0 80-FF 1
+BANK1 100-1FF 1
+CONST 4-B7F 1
+STACK 80-1FF 1
+SMALLCONST 200-B7F 1
+CODE 4-B7F 1
+BIGRAM 49-1FF 1
+COMRAM 49-7F 1
+EEDATA F00000-F000FF 1
+MEDIUMCONST 200-B7F 1
+# %LINETAB Section
+# This section enumerates the file/line to address mappings.
+# The beginning of the section is indicated by %LINETAB.
+# The first line indicates the name of the first object file, e.g.
+#   $foo.obj
+# Each line that follows describes a single mapping until the next
+# object file.  Mappings have the following format:
+#    <address> <psect name> <class name> ><line number>:<file name>
+# The address is absolute and given given in unqualified hex 
+# in delta units of the psect. All mappings within an object file
+# are in ascending order of addresses.
+# All other numeric values are in decimal.
+%LINETAB
+$dist/default/production\PROB1.X.production.o
+BC8 text4 CODE >17:C:\Users\Maulik\MPLABXProjects\PROB1.X\newmain.c
+BCA text4 CODE >18:C:\Users\Maulik\MPLABXProjects\PROB1.X\newmain.c
+BEE text4 CODE >19:C:\Users\Maulik\MPLABXProjects\PROB1.X\newmain.c
+B80 text3 CODE >34:C:/Users/Maulik/MPLABXProjects/PROB1.X/led_driver.c
+B80 text3 CODE >35:C:/Users/Maulik/MPLABXProjects/PROB1.X/led_driver.c
+B82 text3 CODE >36:C:/Users/Maulik/MPLABXProjects/PROB1.X/led_driver.c
+B84 text3 CODE >37:C:/Users/Maulik/MPLABXProjects/PROB1.X/led_driver.c
+B86 text3 CODE >38:C:/Users/Maulik/MPLABXProjects/PROB1.X/led_driver.c
+B88 text3 CODE >39:C:/Users/Maulik/MPLABXProjects/PROB1.X/led_driver.c
+B8A text3 CODE >40:C:/Users/Maulik/MPLABXProjects/PROB1.X/led_driver.c
+B8C text3 CODE >41:C:/Users/Maulik/MPLABXProjects/PROB1.X/led_driver.c
+B8E text3 CODE >44:C:/Users/Maulik/MPLABXProjects/PROB1.X/led_driver.c
+B90 text2 CODE >19:C:/Users/Maulik/MPLABXProjects/PROB1.X/led_driver.c
+B90 text2 CODE >20:C:/Users/Maulik/MPLABXProjects/PROB1.X/led_driver.c
+B92 text2 CODE >21:C:/Users/Maulik/MPLABXProjects/PROB1.X/led_driver.c
+B94 text2 CODE >22:C:/Users/Maulik/MPLABXProjects/PROB1.X/led_driver.c
+B96 text2 CODE >23:C:/Users/Maulik/MPLABXProjects/PROB1.X/led_driver.c
+B98 text2 CODE >24:C:/Users/Maulik/MPLABXProjects/PROB1.X/led_driver.c
+B9A text2 CODE >25:C:/Users/Maulik/MPLABXProjects/PROB1.X/led_driver.c
+B9C text2 CODE >26:C:/Users/Maulik/MPLABXProjects/PROB1.X/led_driver.c
+B9E text2 CODE >27:C:/Users/Maulik/MPLABXProjects/PROB1.X/led_driver.c
+BA0 text2 CODE >32:C:/Users/Maulik/MPLABXProjects/PROB1.X/led_driver.c
+C68 text1 CODE >46:C:/Users/Maulik/MPLABXProjects/PROB1.X/led_driver.c
+C6A text1 CODE >47:C:/Users/Maulik/MPLABXProjects/PROB1.X/led_driver.c
+C7A text1 CODE >48:C:/Users/Maulik/MPLABXProjects/PROB1.X/led_driver.c
+C84 text1 CODE >49:C:/Users/Maulik/MPLABXProjects/PROB1.X/led_driver.c
+C8E text1 CODE >50:C:/Users/Maulik/MPLABXProjects/PROB1.X/led_driver.c
+C98 text1 CODE >51:C:/Users/Maulik/MPLABXProjects/PROB1.X/led_driver.c
+CA2 text1 CODE >52:C:/Users/Maulik/MPLABXProjects/PROB1.X/led_driver.c
+CAC text1 CODE >53:C:/Users/Maulik/MPLABXProjects/PROB1.X/led_driver.c
+CB6 text1 CODE >54:C:/Users/Maulik/MPLABXProjects/PROB1.X/led_driver.c
+CC4 text1 CODE >55:C:/Users/Maulik/MPLABXProjects/PROB1.X/led_driver.c
+CC4 text1 CODE >56:C:/Users/Maulik/MPLABXProjects/PROB1.X/led_driver.c
+CD4 text1 CODE >57:C:/Users/Maulik/MPLABXProjects/PROB1.X/led_driver.c
+CDE text1 CODE >58:C:/Users/Maulik/MPLABXProjects/PROB1.X/led_driver.c
+CE8 text1 CODE >59:C:/Users/Maulik/MPLABXProjects/PROB1.X/led_driver.c
+CF2 text1 CODE >60:C:/Users/Maulik/MPLABXProjects/PROB1.X/led_driver.c
+CFC text1 CODE >61:C:/Users/Maulik/MPLABXProjects/PROB1.X/led_driver.c
+D06 text1 CODE >62:C:/Users/Maulik/MPLABXProjects/PROB1.X/led_driver.c
+D10 text1 CODE >63:C:/Users/Maulik/MPLABXProjects/PROB1.X/led_driver.c
+D1E text1 CODE >64:C:/Users/Maulik/MPLABXProjects/PROB1.X/led_driver.c
+D1E text1 CODE >65:C:/Users/Maulik/MPLABXProjects/PROB1.X/led_driver.c
+D30 text1 CODE >66:C:/Users/Maulik/MPLABXProjects/PROB1.X/led_driver.c
+D3A text1 CODE >67:C:/Users/Maulik/MPLABXProjects/PROB1.X/led_driver.c
+D44 text1 CODE >68:C:/Users/Maulik/MPLABXProjects/PROB1.X/led_driver.c
+D4E text1 CODE >69:C:/Users/Maulik/MPLABXProjects/PROB1.X/led_driver.c
+D58 text1 CODE >70:C:/Users/Maulik/MPLABXProjects/PROB1.X/led_driver.c
+D62 text1 CODE >71:C:/Users/Maulik/MPLABXProjects/PROB1.X/led_driver.c
+D6C text1 CODE >72:C:/Users/Maulik/MPLABXProjects/PROB1.X/led_driver.c
+D7A text1 CODE >73:C:/Users/Maulik/MPLABXProjects/PROB1.X/led_driver.c
+D7A text1 CODE >74:C:/Users/Maulik/MPLABXProjects/PROB1.X/led_driver.c
+D8C text1 CODE >75:C:/Users/Maulik/MPLABXProjects/PROB1.X/led_driver.c
+D96 text1 CODE >76:C:/Users/Maulik/MPLABXProjects/PROB1.X/led_driver.c
+DA0 text1 CODE >77:C:/Users/Maulik/MPLABXProjects/PROB1.X/led_driver.c
+DAA text1 CODE >78:C:/Users/Maulik/MPLABXProjects/PROB1.X/led_driver.c
+DB4 text1 CODE >79:C:/Users/Maulik/MPLABXProjects/PROB1.X/led_driver.c
+DBE text1 CODE >80:C:/Users/Maulik/MPLABXProjects/PROB1.X/led_driver.c
+DC8 text1 CODE >81:C:/Users/Maulik/MPLABXProjects/PROB1.X/led_driver.c
+DD6 text1 CODE >82:C:/Users/Maulik/MPLABXProjects/PROB1.X/led_driver.c
+DD6 text1 CODE >85:C:/Users/Maulik/MPLABXProjects/PROB1.X/led_driver.c
+DE8 text1 CODE >86:C:/Users/Maulik/MPLABXProjects/PROB1.X/led_driver.c
+DF2 text1 CODE >87:C:/Users/Maulik/MPLABXProjects/PROB1.X/led_driver.c
+DFC text1 CODE >88:C:/Users/Maulik/MPLABXProjects/PROB1.X/led_driver.c
+E06 text1 CODE >89:C:/Users/Maulik/MPLABXProjects/PROB1.X/led_driver.c
+E10 text1 CODE >90:C:/Users/Maulik/MPLABXProjects/PROB1.X/led_driver.c
+E1A text1 CODE >91:C:/Users/Maulik/MPLABXProjects/PROB1.X/led_driver.c
+E24 text1 CODE >92:C:/Users/Maulik/MPLABXProjects/PROB1.X/led_driver.c
+E32 text1 CODE >93:C:/Users/Maulik/MPLABXProjects/PROB1.X/led_driver.c
+E32 text1 CODE >94:C:/Users/Maulik/MPLABXProjects/PROB1.X/led_driver.c
+E44 text1 CODE >95:C:/Users/Maulik/MPLABXProjects/PROB1.X/led_driver.c
+E4E text1 CODE >96:C:/Users/Maulik/MPLABXProjects/PROB1.X/led_driver.c
+E58 text1 CODE >97:C:/Users/Maulik/MPLABXProjects/PROB1.X/led_driver.c
+E62 text1 CODE >98:C:/Users/Maulik/MPLABXProjects/PROB1.X/led_driver.c
+E6C text1 CODE >99:C:/Users/Maulik/MPLABXProjects/PROB1.X/led_driver.c
+E76 text1 CODE >100:C:/Users/Maulik/MPLABXProjects/PROB1.X/led_driver.c
+E80 text1 CODE >101:C:/Users/Maulik/MPLABXProjects/PROB1.X/led_driver.c
+E8E text1 CODE >102:C:/Users/Maulik/MPLABXProjects/PROB1.X/led_driver.c
+E8E text1 CODE >103:C:/Users/Maulik/MPLABXProjects/PROB1.X/led_driver.c
+EA0 text1 CODE >104:C:/Users/Maulik/MPLABXProjects/PROB1.X/led_driver.c
+EAA text1 CODE >105:C:/Users/Maulik/MPLABXProjects/PROB1.X/led_driver.c
+EB4 text1 CODE >106:C:/Users/Maulik/MPLABXProjects/PROB1.X/led_driver.c
+EBE text1 CODE >107:C:/Users/Maulik/MPLABXProjects/PROB1.X/led_driver.c
+EC8 text1 CODE >108:C:/Users/Maulik/MPLABXProjects/PROB1.X/led_driver.c
+ED2 text1 CODE >109:C:/Users/Maulik/MPLABXProjects/PROB1.X/led_driver.c
+EDC text1 CODE >110:C:/Users/Maulik/MPLABXProjects/PROB1.X/led_driver.c
+EEA text1 CODE >111:C:/Users/Maulik/MPLABXProjects/PROB1.X/led_driver.c
+EEA text1 CODE >112:C:/Users/Maulik/MPLABXProjects/PROB1.X/led_driver.c
+EFC text1 CODE >113:C:/Users/Maulik/MPLABXProjects/PROB1.X/led_driver.c
+F06 text1 CODE >114:C:/Users/Maulik/MPLABXProjects/PROB1.X/led_driver.c
+F10 text1 CODE >115:C:/Users/Maulik/MPLABXProjects/PROB1.X/led_driver.c
+F1A text1 CODE >116:C:/Users/Maulik/MPLABXProjects/PROB1.X/led_driver.c
+F24 text1 CODE >117:C:/Users/Maulik/MPLABXProjects/PROB1.X/led_driver.c
+F2E text1 CODE >118:C:/Users/Maulik/MPLABXProjects/PROB1.X/led_driver.c
+F38 text1 CODE >119:C:/Users/Maulik/MPLABXProjects/PROB1.X/led_driver.c
+F46 text1 CODE >120:C:/Users/Maulik/MPLABXProjects/PROB1.X/led_driver.c
+F46 text1 CODE >121:C:/Users/Maulik/MPLABXProjects/PROB1.X/led_driver.c
+F58 text1 CODE >122:C:/Users/Maulik/MPLABXProjects/PROB1.X/led_driver.c
+F62 text1 CODE >123:C:/Users/Maulik/MPLABXProjects/PROB1.X/led_driver.c
+F6C text1 CODE >124:C:/Users/Maulik/MPLABXProjects/PROB1.X/led_driver.c
+F76 text1 CODE >125:C:/Users/Maulik/MPLABXProjects/PROB1.X/led_driver.c
+F80 text1 CODE >126:C:/Users/Maulik/MPLABXProjects/PROB1.X/led_driver.c
+F8A text1 CODE >127:C:/Users/Maulik/MPLABXProjects/PROB1.X/led_driver.c
+F94 text1 CODE >128:C:/Users/Maulik/MPLABXProjects/PROB1.X/led_driver.c
+FA2 text1 CODE >129:C:/Users/Maulik/MPLABXProjects/PROB1.X/led_driver.c
+FA2 text1 CODE >130:C:/Users/Maulik/MPLABXProjects/PROB1.X/led_driver.c
+FB4 text1 CODE >131:C:/Users/Maulik/MPLABXProjects/PROB1.X/led_driver.c
+FBE text1 CODE >132:C:/Users/Maulik/MPLABXProjects/PROB1.X/led_driver.c
+FC8 text1 CODE >133:C:/Users/Maulik/MPLABXProjects/PROB1.X/led_driver.c
+FD2 text1 CODE >134:C:/Users/Maulik/MPLABXProjects/PROB1.X/led_driver.c
+FDC text1 CODE >135:C:/Users/Maulik/MPLABXProjects/PROB1.X/led_driver.c
+FE6 text1 CODE >136:C:/Users/Maulik/MPLABXProjects/PROB1.X/led_driver.c
+FF0 text1 CODE >137:C:/Users/Maulik/MPLABXProjects/PROB1.X/led_driver.c
+FFE text1 CODE >138:C:/Users/Maulik/MPLABXProjects/PROB1.X/led_driver.c
+FFE text1 CODE >145:C:/Users/Maulik/MPLABXProjects/PROB1.X/led_driver.c
+BF0 text0 CODE >21:C:\Users\Maulik\MPLABXProjects\PROB1.X\newmain.c
+BF0 text0 CODE >23:C:\Users\Maulik\MPLABXProjects\PROB1.X\newmain.c
+BF4 text0 CODE >24:C:\Users\Maulik\MPLABXProjects\PROB1.X\newmain.c
+BF8 text0 CODE >25:C:\Users\Maulik\MPLABXProjects\PROB1.X\newmain.c
+C00 text0 CODE >26:C:\Users\Maulik\MPLABXProjects\PROB1.X\newmain.c
+C00 text0 CODE >28:C:\Users\Maulik\MPLABXProjects\PROB1.X\newmain.c
+C06 text0 CODE >29:C:\Users\Maulik\MPLABXProjects\PROB1.X\newmain.c
+C0C text0 CODE >30:C:\Users\Maulik\MPLABXProjects\PROB1.X\newmain.c
+C10 text0 CODE >31:C:\Users\Maulik\MPLABXProjects\PROB1.X\newmain.c
+C1A text0 CODE >34:C:\Users\Maulik\MPLABXProjects\PROB1.X\newmain.c
+C1E text0 CODE >35:C:\Users\Maulik\MPLABXProjects\PROB1.X\newmain.c
+BA2 cinit CODE >744:C:\Users\Maulik\AppData\Local\Temp\scm4.
+BA2 cinit CODE >746:C:\Users\Maulik\AppData\Local\Temp\scm4.
+BA2 cinit CODE >749:C:\Users\Maulik\AppData\Local\Temp\scm4.
+BA2 cinit CODE >764:C:\Users\Maulik\AppData\Local\Temp\scm4.
+BA4 cinit CODE >765:C:\Users\Maulik\AppData\Local\Temp\scm4.
+BA6 cinit CODE >766:C:\Users\Maulik\AppData\Local\Temp\scm4.
+BA8 cinit CODE >767:C:\Users\Maulik\AppData\Local\Temp\scm4.
+BAA cinit CODE >768:C:\Users\Maulik\AppData\Local\Temp\scm4.
+BAC cinit CODE >769:C:\Users\Maulik\AppData\Local\Temp\scm4.
+BAE cinit CODE >770:C:\Users\Maulik\AppData\Local\Temp\scm4.
+BB2 cinit CODE >771:C:\Users\Maulik\AppData\Local\Temp\scm4.
+BB6 cinit CODE >772:C:\Users\Maulik\AppData\Local\Temp\scm4.
+BB6 cinit CODE >773:C:\Users\Maulik\AppData\Local\Temp\scm4.
+BB8 cinit CODE >774:C:\Users\Maulik\AppData\Local\Temp\scm4.
+BBC cinit CODE >775:C:\Users\Maulik\AppData\Local\Temp\scm4.
+BBE cinit CODE >776:C:\Users\Maulik\AppData\Local\Temp\scm4.
+BC0 cinit CODE >777:C:\Users\Maulik\AppData\Local\Temp\scm4.
+BC2 cinit CODE >783:C:\Users\Maulik\AppData\Local\Temp\scm4.
+BC2 cinit CODE >785:C:\Users\Maulik\AppData\Local\Temp\scm4.
+BC4 cinit CODE >786:C:\Users\Maulik\AppData\Local\Temp\scm4.
+# %SYMTAB Section
+# An enumeration of all symbols in the program.
+# The beginning of the section is indicated by %SYMTAB.
+# Each line describes a single symbol as follows:
+#    <label> <value> [-]<load-adj> <class> <space> <psect> <file-name>
+# The value and load-adj are both in unqualified hexadecimal.
+# All other numeric values are in decimal.  The load-adj is the
+# quantity one needs to add to the symbol value in order to obtain the load
+# address of the symbol.  This value may be signed. If the symbol
+# was defined in a psect then <psect> will be "-". File-name
+# is the name of the object file in which the symbol was defined.
+%SYMTAB
+__Lmediumconst 0 0 MEDIUMCONST 0 mediumconst dist/default/production\PROB1.X.production.o
+__Hspace_0 30000E 0 ABS 0 - dist/default/production\PROB1.X.production.o
+__Hspace_1 49 0 ABS 0 - dist/default/production\PROB1.X.production.o
+__Hspace_2 0 0 ABS 0 - dist/default/production\PROB1.X.production.o
+_led_clear B80 0 CODE 0 text3 dist/default/production\PROB1.X.production.o
+__Hibigdata 0 0 CODE 0 ibigdata dist/default/production\PROB1.X.production.o
+__size_of_led_init 0 0 ABS 0 - dist/default/production\PROB1.X.production.o
+__mediumconst 0 0 MEDIUMCONST 0 mediumconst C:\Users\Maulik\AppData\Local\Temp\scm4.o
+_led_write C68 0 CODE 0 text1 dist/default/production\PROB1.X.production.o
+delay@c 47 0 COMRAM 1 cstackCOMRAM dist/default/production\PROB1.X.production.o
+delay@i 48 0 COMRAM 1 cstackCOMRAM dist/default/production\PROB1.X.production.o
+__Heeprom_data 0 0 EEDATA 0 eeprom_data dist/default/production\PROB1.X.production.o
+__Lsmallconst 0 0 SMALLCONST 0 smallconst dist/default/production\PROB1.X.production.o
+___sp 0 0 STACK 2 stack C:\Users\Maulik\AppData\Local\Temp\scm4.o
+_main BF0 0 CODE 0 text0 dist/default/production\PROB1.X.production.o
+start 0 0 CODE 0 init C:\Users\Maulik\AppData\Local\Temp\scm4.o
+__size_of_main 0 0 ABS 0 - dist/default/production\PROB1.X.production.o
+__Hpowerup 0 0 CODE 0 powerup dist/default/production\PROB1.X.production.o
+__HdataCOMRAM 0 0 ABS 0 dataCOMRAM dist/default/production\PROB1.X.production.o
+__accesstop 80 0 ABS 0 - C:\Users\Maulik\AppData\Local\Temp\scm4.o
+intlevel0 0 0 CODE 0 text C:\Users\Maulik\AppData\Local\Temp\scm4.o
+intlevel1 0 0 CODE 0 text C:\Users\Maulik\AppData\Local\Temp\scm4.o
+intlevel2 0 0 CODE 0 text C:\Users\Maulik\AppData\Local\Temp\scm4.o
+intlevel3 0 0 CODE 0 text C:\Users\Maulik\AppData\Local\Temp\scm4.o
+__LnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/default/production\PROB1.X.production.o
+__CFG_EBTR0$OFF 0 0 ABS 0 - dist/default/production\PROB1.X.production.o
+__CFG_EBTR1$OFF 0 0 ABS 0 - dist/default/production\PROB1.X.production.o
+_led_init B90 0 CODE 0 text2 dist/default/production\PROB1.X.production.o
+__CFG_EBTRB$OFF 0 0 ABS 0 - dist/default/production\PROB1.X.production.o
+__Hifardata 0 0 CODE 0 ifardata dist/default/production\PROB1.X.production.o
+__Hclrtext 0 0 ABS 0 clrtext dist/default/production\PROB1.X.production.o
+__pidataCOMRAM C22 0 CODE 0 idataCOMRAM dist/default/production\PROB1.X.production.o
+__end_of_led_init BA2 0 CODE 0 text2 dist/default/production\PROB1.X.production.o
+___inthi_sp 0 0 STACK 2 stack C:\Users\Maulik\AppData\Local\Temp\scm4.o
+___intlo_sp 0 0 STACK 2 stack C:\Users\Maulik\AppData\Local\Temp\scm4.o
+__LdataCOMRAM 0 0 ABS 0 dataCOMRAM dist/default/production\PROB1.X.production.o
+__Hintcode_body 0 0 ABS 0 intcode_body dist/default/production\PROB1.X.production.o
+__Lintsave_regs 0 0 BIGRAM 1 intsave_regs dist/default/production\PROB1.X.production.o
+__Hmediumconst 0 0 MEDIUMCONST 0 mediumconst dist/default/production\PROB1.X.production.o
+__Hintcodelo 0 0 CODE 0 intcodelo dist/default/production\PROB1.X.production.o
+__size_of_delay 0 0 ABS 0 - dist/default/production\PROB1.X.production.o
+__LidataCOMRAM 0 0 ABS 0 idataCOMRAM dist/default/production\PROB1.X.production.o
+__CFG_FSCM$OFF 0 0 ABS 0 - dist/default/production\PROB1.X.production.o
+__Lintcodelo 0 0 CODE 0 intcodelo dist/default/production\PROB1.X.production.o
+__CFG_MCLRE$OFF 0 0 ABS 0 - dist/default/production\PROB1.X.production.o
+start_initialization BA2 0 CODE 0 cinit dist/default/production\PROB1.X.production.o
+__HnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/default/production\PROB1.X.production.o
+_TRISCbits F94 0 ABS 0 - dist/default/production\PROB1.X.production.o
+___rparam_used 1 0 ABS 0 - dist/default/production\PROB1.X.production.o
+__CFG_WDTPS$32768 0 0 ABS 0 - dist/default/production\PROB1.X.production.o
+__CFG_PBAD$ANA 0 0 ABS 0 - dist/default/production\PROB1.X.production.o
+__Hbank0 0 0 ABS 0 bank0 dist/default/production\PROB1.X.production.o
+__Hbank1 0 0 ABS 0 bank1 dist/default/production\PROB1.X.production.o
+__Hcinit 0 0 ABS 0 cinit dist/default/production\PROB1.X.production.o
+__Hconst 0 0 CONST 0 const dist/default/production\PROB1.X.production.o
+__Hidata 0 0 CODE 0 idata dist/default/production\PROB1.X.production.o
+__Hidloc 200008 0 IDLOC 0 idloc dist/default/production\PROB1.X.production.o
+__Hnvbit 0 0 COMRAM 1 nvbit dist/default/production\PROB1.X.production.o
+__Hparam 0 0 COMRAM 1 rparam dist/default/production\PROB1.X.production.o
+__Hrdata 0 0 COMRAM 1 rdata dist/default/production\PROB1.X.production.o
+__Hstack 0 0 STACK 2 stack dist/default/production\PROB1.X.production.o
+__Htext0 0 0 ABS 0 text0 dist/default/production\PROB1.X.production.o
+__Htext1 0 0 ABS 0 text1 dist/default/production\PROB1.X.production.o
+__Htext2 0 0 ABS 0 text2 dist/default/production\PROB1.X.production.o
+__Htext3 0 0 ABS 0 text3 dist/default/production\PROB1.X.production.o
+__Htext4 0 0 ABS 0 text4 dist/default/production\PROB1.X.production.o
+__Hbigbss 0 0 BIGRAM 1 bigbss dist/default/production\PROB1.X.production.o
+__Hbigram 0 0 ABS 0 bigram dist/default/production\PROB1.X.production.o
+__smallconst 0 0 SMALLCONST 0 smallconst C:\Users\Maulik\AppData\Local\Temp\scm4.o
+__Hcomram 0 0 ABS 0 comram dist/default/production\PROB1.X.production.o
+__Hconfig 30000E 0 CONFIG 0 config dist/default/production\PROB1.X.production.o
+__Lbank0 0 0 ABS 0 bank0 dist/default/production\PROB1.X.production.o
+__Lbank1 0 0 ABS 0 bank1 dist/default/production\PROB1.X.production.o
+__Lcinit 0 0 ABS 0 cinit dist/default/production\PROB1.X.production.o
+__Lconst 0 0 CONST 0 const dist/default/production\PROB1.X.production.o
+__Lidata 0 0 CODE 0 idata dist/default/production\PROB1.X.production.o
+__Lidloc 200000 0 IDLOC 0 idloc dist/default/production\PROB1.X.production.o
+__Lnvbit 0 0 COMRAM 1 nvbit dist/default/production\PROB1.X.production.o
+__Lparam 0 0 COMRAM 1 rparam dist/default/production\PROB1.X.production.o
+__Lrdata 0 0 COMRAM 1 rdata dist/default/production\PROB1.X.production.o
+__Lstack 0 0 STACK 2 stack dist/default/production\PROB1.X.production.o
+__Ltext0 0 0 ABS 0 text0 dist/default/production\PROB1.X.production.o
+__Ltext1 0 0 ABS 0 text1 dist/default/production\PROB1.X.production.o
+__Ltext2 0 0 ABS 0 text2 dist/default/production\PROB1.X.production.o
+__Ltext3 0 0 ABS 0 text3 dist/default/production\PROB1.X.production.o
+__Ltext4 0 0 ABS 0 text4 dist/default/production\PROB1.X.production.o
+__Hfarbss 0 0 FARRAM 0 farbss dist/default/production\PROB1.X.production.o
+__Lintcode_body 0 0 ABS 0 intcode_body dist/default/production\PROB1.X.production.o
+__Habs1 0 0 ABS 0 abs1 dist/default/production\PROB1.X.production.o
+__Hdata 0 0 ABS 0 data dist/default/production\PROB1.X.production.o
+__Hinit 4 0 CODE 0 init dist/default/production\PROB1.X.production.o
+__Hrbit 0 0 COMRAM 1 rbit dist/default/production\PROB1.X.production.o
+__Hrbss 0 0 COMRAM 1 rbss dist/default/production\PROB1.X.production.o
+__Htemp 0 0 COMRAM 1 temp dist/default/production\PROB1.X.production.o
+__Htext 0 0 ABS 0 text dist/default/production\PROB1.X.production.o
+__Labs1 0 0 ABS 0 abs1 dist/default/production\PROB1.X.production.o
+__Ldata 0 0 ABS 0 data dist/default/production\PROB1.X.production.o
+__Linit 0 0 CODE 0 init dist/default/production\PROB1.X.production.o
+__Lrbit 0 0 COMRAM 1 rbit dist/default/production\PROB1.X.production.o
+__Lrbss 0 0 COMRAM 1 rbss dist/default/production\PROB1.X.production.o
+__Ltemp 0 0 COMRAM 1 temp dist/default/production\PROB1.X.production.o
+__Ltext 0 0 ABS 0 text dist/default/production\PROB1.X.production.o
+__HcstackCOMRAM 0 0 ABS 0 cstackCOMRAM dist/default/production\PROB1.X.production.o
+__Hintret 0 0 ABS 0 intret dist/default/production\PROB1.X.production.o
+__Hirdata 0 0 CODE 0 irdata dist/default/production\PROB1.X.production.o
+__S0 30000E 0 ABS 0 - dist/default/production\PROB1.X.production.o
+__S1 49 0 ABS 0 - dist/default/production\PROB1.X.production.o
+__S2 0 0 ABS 0 - dist/default/production\PROB1.X.production.o
+_led 1 0 COMRAM 1 dataCOMRAM dist/default/production\PROB1.X.production.o
+__CFG_OSC$INTIO2 0 0 ABS 0 - dist/default/production\PROB1.X.production.o
+__HidataCOMRAM 0 0 ABS 0 idataCOMRAM dist/default/production\PROB1.X.production.o
+__Lbigdata 0 0 BIGRAM 1 bigdata dist/default/production\PROB1.X.production.o
+__Hnvrram 0 0 COMRAM 1 nvrram dist/default/production\PROB1.X.production.o
+__Lintentry 0 0 ABS 0 intentry dist/default/production\PROB1.X.production.o
+__Hramtop 200 0 RAM 0 ramtop dist/default/production\PROB1.X.production.o
+__Hrparam 0 0 COMRAM 1 rparam dist/default/production\PROB1.X.production.o
+__activetblptr 0 0 ABS 0 - dist/default/production\PROB1.X.production.o
+__Hstruct 0 0 COMRAM 1 struct dist/default/production\PROB1.X.production.o
+__Lbigbss 0 0 BIGRAM 1 bigbss dist/default/production\PROB1.X.production.o
+__Lbigram 0 0 ABS 0 bigram dist/default/production\PROB1.X.production.o
+__CFG_BOR$OFF 0 0 ABS 0 - dist/default/production\PROB1.X.production.o
+__CFG_BORV$20 0 0 ABS 0 - dist/default/production\PROB1.X.production.o
+__Lcomram 0 0 ABS 0 comram dist/default/production\PROB1.X.production.o
+__Lconfig 300000 0 CONFIG 0 config dist/default/production\PROB1.X.production.o
+__CFG_IESO$ON 0 0 ABS 0 - dist/default/production\PROB1.X.production.o
+_LATCbits F8B 0 ABS 0 - dist/default/production\PROB1.X.production.o
+__Lfarbss 0 0 FARRAM 0 farbss dist/default/production\PROB1.X.production.o
+__Lfardata 0 0 FARRAM 0 fardata dist/default/production\PROB1.X.production.o
+__CFG_CCP2MX$ON 0 0 ABS 0 - dist/default/production\PROB1.X.production.o
+stackhi 1FF 0 ABS 0 - C:\Users\Maulik\AppData\Local\Temp\scm4.o
+stacklo 80 0 ABS 0 - C:\Users\Maulik\AppData\Local\Temp\scm4.o
+__Lintcode 0 0 CODE 0 intcode dist/default/production\PROB1.X.production.o
+__Lintret 0 0 ABS 0 intret dist/default/production\PROB1.X.production.o
+__Lirdata 0 0 CODE 0 irdata dist/default/production\PROB1.X.production.o
+__Lspace_0 0 0 ABS 0 - dist/default/production\PROB1.X.production.o
+__Lspace_1 0 0 ABS 0 - dist/default/production\PROB1.X.production.o
+__Lspace_2 0 0 ABS 0 - dist/default/production\PROB1.X.production.o
+__CFG_LVP$ON 0 0 ABS 0 - dist/default/production\PROB1.X.production.o
+__LcstackCOMRAM 0 0 ABS 0 cstackCOMRAM dist/default/production\PROB1.X.production.o
+end_of_initialization BC2 0 CODE 0 cinit dist/default/production\PROB1.X.production.o
+__Lnvrram 0 0 COMRAM 1 nvrram dist/default/production\PROB1.X.production.o
+__Hintentry 0 0 ABS 0 intentry dist/default/production\PROB1.X.production.o
+__Hreset_vec 0 0 CODE 0 reset_vec dist/default/production\PROB1.X.production.o
+__Lramtop 200 0 RAM 0 ramtop dist/default/production\PROB1.X.production.o
+__Lrparam 0 0 COMRAM 1 rparam dist/default/production\PROB1.X.production.o
+__pcinit BA2 0 CODE 0 cinit dist/default/production\PROB1.X.production.o
+__ptext0 BF0 0 CODE 0 text0 dist/default/production\PROB1.X.production.o
+__ptext1 C68 0 CODE 0 text1 dist/default/production\PROB1.X.production.o
+__ptext2 B90 0 CODE 0 text2 dist/default/production\PROB1.X.production.o
+__ptext3 B80 0 CODE 0 text3 dist/default/production\PROB1.X.production.o
+__ptext4 BC8 0 CODE 0 text4 dist/default/production\PROB1.X.production.o
+__Lstruct 0 0 COMRAM 1 struct dist/default/production\PROB1.X.production.o
+__CFG_STVR$ON 0 0 ABS 0 - dist/default/production\PROB1.X.production.o
+__ramtop 200 0 RAM 0 ramtop C:\Users\Maulik\AppData\Local\Temp\scm4.o
+__Lpowerup 0 0 CODE 0 powerup dist/default/production\PROB1.X.production.o
+__Leeprom_data 0 0 EEDATA 0 eeprom_data dist/default/production\PROB1.X.production.o
+led_write@i 47 0 COMRAM 1 cstackCOMRAM dist/default/production\PROB1.X.production.o
+__Lreset_vec 0 0 CODE 0 reset_vec dist/default/production\PROB1.X.production.o
+___param_bank 0 0 ABS 0 - dist/default/production\PROB1.X.production.o
+__CFG_WDT$OFF 0 0 ABS 0 - dist/default/production\PROB1.X.production.o
+__Hbigdata 0 0 BIGRAM 1 bigdata dist/default/production\PROB1.X.production.o
+__end_of__initialization BC2 0 CODE 0 cinit dist/default/production\PROB1.X.production.o
+__CFG_WRT0$OFF 0 0 ABS 0 - dist/default/production\PROB1.X.production.o
+__CFG_WRT1$OFF 0 0 ABS 0 - dist/default/production\PROB1.X.production.o
+__CFG_WRTB$OFF 0 0 ABS 0 - dist/default/production\PROB1.X.production.o
+__Libigdata 0 0 CODE 0 ibigdata dist/default/production\PROB1.X.production.o
+__CFG_WRTC$OFF 0 0 ABS 0 - dist/default/production\PROB1.X.production.o
+__CFG_WRTD$OFF 0 0 ABS 0 - dist/default/production\PROB1.X.production.o
+__Lclrtext 0 0 ABS 0 clrtext dist/default/production\PROB1.X.production.o
+__CFG_PWRT$OFF 0 0 ABS 0 - dist/default/production\PROB1.X.production.o
+__pcstackCOMRAM 47 0 COMRAM 1 cstackCOMRAM dist/default/production\PROB1.X.production.o
+__end_of_main C22 0 CODE 0 text0 dist/default/production\PROB1.X.production.o
+__end_of_delay BF0 0 CODE 0 text4 dist/default/production\PROB1.X.production.o
+_TRISC F94 0 ABS 0 - dist/default/production\PROB1.X.production.o
+__CFG_CP0$OFF 0 0 ABS 0 - dist/default/production\PROB1.X.production.o
+__CFG_CP1$OFF 0 0 ABS 0 - dist/default/production\PROB1.X.production.o
+__HRAM 0 0 ABS 0 - dist/default/production\PROB1.X.production.o
+__Hbss 0 0 RAM 1 bss dist/default/production\PROB1.X.production.o
+__Hram 0 0 ABS 0 ram dist/default/production\PROB1.X.production.o
+__Hsfr 0 0 ABS 0 sfr dist/default/production\PROB1.X.production.o
+__LRAM 1 0 ABS 0 - dist/default/production\PROB1.X.production.o
+__Lbss 0 0 RAM 1 bss dist/default/production\PROB1.X.production.o
+__Lram 0 0 ABS 0 ram dist/default/production\PROB1.X.production.o
+__Lsfr 0 0 ABS 0 sfr dist/default/production\PROB1.X.production.o
+_delay BC8 0 CODE 0 text4 dist/default/production\PROB1.X.production.o
+__CFG_CPB$OFF 0 0 ABS 0 - dist/default/production\PROB1.X.production.o
+__CFG_CPD$OFF 0 0 ABS 0 - dist/default/production\PROB1.X.production.o
+__initialization BA2 0 CODE 0 cinit dist/default/production\PROB1.X.production.o
+__pdataCOMRAM 1 0 COMRAM 1 dataCOMRAM dist/default/production\PROB1.X.production.o
+__end_of_led_clear B90 0 CODE 0 text3 dist/default/production\PROB1.X.production.o
+__Hfardata 0 0 FARRAM 0 fardata dist/default/production\PROB1.X.production.o
+__Hsmallconst 0 0 SMALLCONST 0 smallconst dist/default/production\PROB1.X.production.o
+__end_of_led_write 1000 0 CODE 0 text1 dist/default/production\PROB1.X.production.o
+__size_of_led_clear 0 0 ABS 0 - dist/default/production\PROB1.X.production.o
+__Lifardata 0 0 CODE 0 ifardata dist/default/production\PROB1.X.production.o
+__size_of_led_write 0 0 ABS 0 - dist/default/production\PROB1.X.production.o
+__Hintsave_regs 0 0 BIGRAM 1 intsave_regs dist/default/production\PROB1.X.production.o
+__Hintcode 0 0 CODE 0 intcode dist/default/production\PROB1.X.production.o
+# %SPLITSTAB Section
+# This section enumerates all the psect splits performed by the assembler.
+# The beginning of the section is indicated by %SPLITSTAB.
+# Each line is a record a particular split, where the parent psect is on
+# the left and the child on the right.  Note that a child psect is always
+# split form the top of the parent psect. All splits from a given parent
+# are listed in the order in which they occurred.
+%SPLITSTAB
+# %DABS Section
+# This section contains a table of all usuage of the assember
+# directive DABS in the program. Each line has the following format:
+#   <name> <space> <address> <size>
+# If the DABS was originally labelled then that shall be <name>,
+# otherwise name will be "-".  The <space> number is in decimal.
+# <address> and <size> are in byte units as unqaulified hexadecimal
+%DABS
+# %SEGMENTS Section
+# This sections enumerates the segments of the program.  Each segment
+# is described on a single line as follows:
+#    <name> <space> <link address> <file address> <size> <delta>
+# Addresses and size are in unqualified hexadecimal.  The link address
+# and size are in units of delta. The file address is in units of bytes.
+# All other numeric quantities are in decimal.
+%SEGMENTS
+cinit 0 BA2 BA2 26 1
+idloc 0 200000 200000 8 1
+text0 0 BF0 BF0 32 1
+text1 0 C68 C68 398 1
+text2 0 B90 B90 12 1
+text3 0 B80 B80 10 1
+text4 0 BC8 BC8 28 1
+idataCOMRAM 0 C22 C22 46 1
+reset_vec 0 0 0 4 1
+dataCOMRAM 1 1 1 48 1
+config 0 300000 300000 E 1
